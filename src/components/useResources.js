@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// now we can resuse this function anywhere inside our project
+// Now we can resuse this function anywhere inside our project
 const useResources = resource => {
   const [resources, setResources] = useState([]);
 

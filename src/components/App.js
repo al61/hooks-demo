@@ -1,4 +1,6 @@
-/////////////////////   CLASS BASED COMPONENT
+// -----------------------------------------------------------------
+// --------------     Class Based Component    ---------------------
+// -----------------------------------------------------------------
 
 import React, { Component } from 'react';
 
@@ -20,7 +22,9 @@ export class App extends Component {
 
 export default App;
 
-/////////////////////   USING HOOKS 1
+// -----------------------------------------------------------------
+// -------------------     USING HOOKS 1     -----------------------
+// -----------------------------------------------------------------
 /*
 import React, { useState } from 'react';
 
@@ -41,7 +45,9 @@ const App = () => {
 export default App;
 */
 
-/////////////////////   USING HOOKS 2
+// -----------------------------------------------------------------
+// -------------------     USING HOOKS 2     -----------------------
+// -----------------------------------------------------------------
 /*
 import React, { useState } from 'react';
 import ResourceList from './ResourceList';
@@ -63,7 +69,9 @@ const App = () => {
 export default App;
 */
 
-/////////////////////   USING HOOKS 3
+// -----------------------------------------------------------------
+// -------------------     USING HOOKS 3     -----------------------
+// -----------------------------------------------------------------
 /*
 import React, { useState } from 'react';
 import ResourceList from './ResourceList';
@@ -75,6 +83,7 @@ const App = () => {
   return (
     <div>
       <UserList />
+      <hr />
       <div>
         <button onClick={() => setResource('posts')}>Posts</button>
         <button onClick={() => setResource('todos')}>Todos</button>

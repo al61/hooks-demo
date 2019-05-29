@@ -1,4 +1,6 @@
-/////////////////////   CLASS BASED COMPONENT
+// -----------------------------------------------------------------
+// --------------     Class Based Component    ---------------------
+// -----------------------------------------------------------------
 /*
 import React, { Component } from 'react';
 import axios from 'axios';
@@ -29,23 +31,26 @@ export class ResourceList extends Component {
 export default ResourceList;
 */
 
+// -----------------------------------------------------------------
+// -------------------     USING HOOKS 1     -----------------------
+// -----------------------------------------------------------------
 /*
-From Facebook (reactjs.org):
-- Hooks solve a wide variety of seemingly unconnected problems in React that we’ve 
+From Facebook Team (reactjs.org):
+- Hooks solve a wide variety of seemingly unconnected problems in React that we’ve
   encountered over five years of writing and maintaining tens of thousands of components.
-- We’ve seen how effect cleanup avoids duplication in componentDidUpdate and componentWillUnmount, 
-  brings related code closer together, and helps us avoid bugs. We’ve also seen how we can 
+- We’ve seen how effect cleanup avoids duplication in componentDidUpdate and componentWillUnmount,
+  brings related code closer together, and helps us avoid bugs. We’ve also seen how we can
   separate effects by their purpose, which is something we couldn’t do in classes at all.
 */
 
-/////////////////////   USING HOOKS 1
 // A Hook is a special function that lets you “hook into” React features.
+
 /*
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const ResourceList = resource => {
-  // Declare a new state variable called "resources". "setResources" is a function that lets up update "resource"
+  // Declare a new state variable called "resources". "setResources" is a function that lets you update "resource"
   const [resources, setResources] = useState([]);
 
   const fetchResource = async resource => {
@@ -56,10 +61,9 @@ const ResourceList = resource => {
   // anytime the component gets rendered or updated. Think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
   useEffect(() => {
     fetchResource(resource);
-    
+
     // Specify how to clean up after this effect (optional):
     // return function cleanup() { ... };
-      
   }, [resource]); // Only re-run the effect if "resource" changes (pass an array as an optional second argument)
 
   return (
@@ -74,7 +78,9 @@ const ResourceList = resource => {
 export default ResourceList;
 */
 
-/////////////////////   USING HOOKS 2
+// -----------------------------------------------------------------
+// -------------------     USING HOOKS 2     -----------------------
+// -----------------------------------------------------------------
 /*
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -108,7 +114,9 @@ const ResourceList = resource => {
 export default ResourceList;
 */
 
-/////////////////////   USING HOOKS 3
+// -----------------------------------------------------------------
+// -------------------     USING HOOKS 3     -----------------------
+// -----------------------------------------------------------------
 /*
 import React from 'react';
 import useResources from './useResources';
